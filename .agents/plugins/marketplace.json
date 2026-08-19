@@ -1,0 +1,20 @@
+{
+  "name": "ember",
+  "interface": {
+    "displayName": "Ember by Shield"
+  },
+  "plugins": [
+    {
+      "name": "ember",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ember"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business & Operations"
+    }
+  ]
+}

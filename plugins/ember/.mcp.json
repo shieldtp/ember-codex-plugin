@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ember": {
+      "type": "http",
+      "url": "https://ember-gateway-production.ember-shield-tp.workers.dev/mcp",
+      "oauth_resource": "https://ember-gateway-production.ember-shield-tp.workers.dev/mcp",
+      "scopes": ["ember:whoami"],
+      "extensions": {
+        "com.openai": {
+          "directConnection": true
+        }
+      }
+    }
+  }
+}

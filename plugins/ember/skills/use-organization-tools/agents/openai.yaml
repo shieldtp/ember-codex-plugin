@@ -1,0 +1,13 @@
+interface:
+  display_name: "Use organization tools"
+  short_description: "Check the connection and use approved tools"
+  default_prompt: "Use $use-organization-tools to check my connection, organization, and approved tools."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "ember"
+      description: "Ember MCP server"
+      transport: "streamable_http"
+      url: "https://ember-gateway-production.ember-shield-tp.workers.dev/mcp"
+policy:
+  allow_implicit_invocation: true
