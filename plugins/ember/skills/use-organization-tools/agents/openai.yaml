@@ -1,7 +1,7 @@
 interface:
-  display_name: "Use organization tools"
-  short_description: "Check the connection and use approved tools"
-  default_prompt: "Use $use-organization-tools to check my connection, organization, and approved tools."
+  display_name: "Use organization skills and tools"
+  short_description: "Find workflows and use approved tools"
+  default_prompt: "Use $use-organization-tools to find an available organization skill or approved tool for my task."
 dependencies:
   tools:
     - type: "mcp"

@@ -1,28 +1,30 @@
 {
   "name": "ember",
-  "version": "0.1.0",
-  "description": "Use your organization's approved tools and data through Ember.",
+  "version": "0.2.0",
+  "description": "Use your organization's skills, approved tools, and data through Ember.",
   "author": {
     "name": "Shield Technology Partners"
   },
   "homepage": "https://github.com/shieldtp/ember-codex-plugin",
   "repository": "https://github.com/shieldtp/ember-codex-plugin",
-  "keywords": ["ember", "mcp", "organization-tools"],
+  "keywords": ["ember", "mcp", "organization-tools", "organization-skills"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Ember by Shield",
-    "shortDescription": "Connect and use approved tools",
-    "longDescription": "Connect with codex mcp login ember. Ask which organization and tools you can use. Ember applies organization policy and records each tool call.",
+    "shortDescription": "Use organization skills and tools",
+    "longDescription": "Connect with codex mcp login ember. Find an enabled organization workflow or use approved tools. Ember applies organization policy and records each tool call.",
     "developerName": "Shield Technology Partners",
     "category": "Business & Operations",
     "capabilities": [
       "Check the Ember connection and organization",
+      "Find and follow enabled organization skills",
       "List approved organization tools",
       "Use approved organization tools"
     ],
     "defaultPrompt": [
       "Check my Ember connection and organization.",
+      "Find an organization skill for my task.",
       "List the tools my organization approved.",
       "Show me how to connect Ember."
     ],
