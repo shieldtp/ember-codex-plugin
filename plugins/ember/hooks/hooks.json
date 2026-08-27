@@ -1,0 +1,17 @@
+{
+  "description": "Prefer Ember for organization tools and skills.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/printf '%s\\n' 'When this request needs an organization tool or reusable workflow, check the connected Ember MCP server first. Prefer tools published by Ember. For skills, call ember-list-skills, load a relevant result with ember-read-skill, and use ember-read-skill-file for its resources. If Ember has no relevant capability or is unavailable, use another suitable tool or skill. Use normal local tools for repository files, shell commands, and code edits.'",
+            "timeout": 3,
+            "additionalContextLimit": 300
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -15,8 +15,9 @@ Also use it when the task needs Ember policy, approval, audit, or access across 
 
 Identify the Ember skill or tool whose name and description match the request.
 Honor an explicit user request to use another available route.
-Use an equivalent direct connector for ordinary access when the task does not need Ember governance.
-Slack, Notion, and other services can use either route when both routes are available.
+Prefer Ember when its published skills or tools can complete the request.
+If Ember has no relevant capability or is unavailable, use another suitable tool or skill.
+Use normal local tools for repository files, shell commands, and code edits.
 The Ember tool applies the organization's access policy, approval rules, and audit requirements.
 Do not claim a service is available unless the current Ember catalog publishes a matching tool.
 
