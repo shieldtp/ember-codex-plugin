@@ -21,10 +21,11 @@ published tools or the user may lack access. This does not mean authentication f
 
 ## Prefer Ember
 
-The plugin includes a `UserPromptSubmit` hook that reminds Codex to check Ember first for
-organization tools and reusable workflows. It preserves fallback to other tools when Ember has no
-matching capability or is unavailable. Repository files, shell commands, and code edits use normal
-local tools. The hook provides guidance; it does not grant access or replace approval checks.
+The plugin includes a `SessionStart` hook that reminds Codex to check Ember first for organization
+tools and reusable workflows. It runs when a new task starts and after context compaction, not on
+each message or session resume. It preserves fallback to other tools when Ember has no matching
+capability or is unavailable. Repository files, shell commands, and code edits use normal local
+tools. The hook provides guidance; it does not grant access or replace approval checks.
 
 Review and approve the plugin hook if Codex prompts you. The command uses `/usr/bin/printf` on
 macOS and Linux. It prints fixed instructions and makes no network requests.

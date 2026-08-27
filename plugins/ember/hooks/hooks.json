@@ -1,8 +1,9 @@
 {
   "description": "Prefer Ember for organization tools and skills.",
   "hooks": {
-    "UserPromptSubmit": [
+    "SessionStart": [
       {
+        "matcher": "^(startup|compact)$",
         "hooks": [
           {
             "type": "command",
