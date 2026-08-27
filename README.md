@@ -33,20 +33,20 @@ you confirm the plugin hook works. This prevents duplicate reminders.
 
 ## Use organization skills
 
-Ask Codex to find an Ember skill for your task. On gateways that expose `ember-list-skills` and
-`ember-read-skill`, the plugin finds a matching enabled workflow and loads its current instructions.
-The skill and its tool calls use the same Ember connection. Normal access and approval checks still
-apply.
+Ask Codex to find an Ember skill for your task. The hook reminds Codex to check Ember first.
+The MCP server provides the discovery and file-read instructions through its tool descriptions.
+It returns the current workflow instructions when Codex reads a skill. Normal access and approval
+checks still apply.
 
-Customer skills stay in Ember rather than being copied into this plugin or installed in Codex's
-native skill picker. Fresh reads pick up saved changes and disablement. Older gateways remain
-usable through their approved tool catalog. Release this plugin version after skill delivery is
-available on the production gateway.
+The plugin does not bundle local Codex skills. Organization skills stay in Ember, and fresh reads
+pick up published changes and disablement. Gateways without skills remain usable through their
+approved tool catalog.
 
 ## Contents
 
 - `.agents/plugins/marketplace.json` defines the Ember marketplace.
 - `plugins/ember` contains the production plugin package.
+- `plugins/ember/.mcp.json` configures the Ember MCP connection.
 - `plugins/ember/hooks/hooks.json` contains the Ember-first hook that Codex discovers automatically.
 
 Local and development profiles remain in the private Ember application repository. This repository
