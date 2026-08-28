@@ -16,6 +16,9 @@ codex mcp login ember
 Start a new Codex task after installation. Ask Codex to check the Ember connection and organization.
 A successful `ember-whoami` call proves that the connection works.
 
+The plugin requests every current Ember scope during sign-in. Ember grants each administrator scope
+only when the signed-in user has the required access.
+
 If Ember lists no connector tools after `ember-whoami` succeeds, the organization may have no
 published tools or the user may lack access. This does not mean authentication failed.
 
