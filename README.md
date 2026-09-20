@@ -16,8 +16,14 @@ codex mcp login ember
 Start a new Codex task after installation. Ask Codex to check the Ember connection and organization.
 A successful `ember-whoami` call proves that the connection works.
 
-The plugin requests every current Ember scope during sign-in. Ember grants each administrator scope
-only when the signed-in user has the required access.
+The plugin requests every current Ember scope during sign-in, including `ember:tool-views:write`
+for creating and managing tool views. Ember grants each administrator scope only when the signed-in
+user has the required access. Tool view authoring also requires the organization's
+`ember-tool-views-enabled` feature flag.
+
+After updating from an earlier plugin version, sign in again with `codex mcp login ember` to consent
+to the added scope, then start a new Codex task. Check `ember-whoami` for `ember:tool-views:write`;
+updating the plugin alone does not add consent to an existing OAuth grant.
 
 If Ember lists no connector tools after `ember-whoami` succeeds, the organization may have no
 published tools or the user may lack access. This does not mean authentication failed.
